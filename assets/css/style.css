@@ -146,7 +146,7 @@ body {
   padding-inline: 36px;
   transition: var(--transition-1);
   border-radius: 10px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .btn:is(:hover, :focus-visible) { background-color: var(--umber); }
@@ -227,7 +227,7 @@ nav img{
   display: inline-block;
   position: relative;
   padding:  20px 0px 25px 10px;
-  font-weight: 700;
+  font-weight: 600;
   margin-left: 2px;
 }
 .nav-links ul li a{
@@ -583,10 +583,13 @@ width: 100%;
   gap: 30px;
   padding-block-end: 30px;
   border-block-end: 1px solid var(--green);
+  text-align: center;
 }
 
-.social-list {
+.social ul{
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -632,15 +635,39 @@ width: 100%;
 
 @media (min-width: 575px) {
 
-  /**
-   * REUSED STYLE
-   */
+  :root {
+    --fs-2: 4.8rem;
+    --fs-3: 3.5rem;
+    --fs-7: 1.5rem;
+  }
+
+  nav img {
+    width: 120px;
+   }
+  .nav-links ul{
+    margin-top: 50px;
+    margin-left: -80px;
+  padding-right: 4%;
+  }
+
+  .banner .contents {
+    margin-top: 10%;
+  }
 
   .container {
     max-width: 540px;
     width: 100%;
     margin-inline: auto;
   }
+
+  .schedule .timeline{ 
+    width: 60%;
+  }
+
+  .schedule .visit h1 {
+    padding-top: 15%;
+  }
+
 
 }
 
@@ -736,7 +763,7 @@ width: 100%;
 
     --fs-2: 4.8rem;
     --fs-3: 3.5rem;
-    --fs-7: 1.5rem;
+    --fs-7: 1.9rem;
   }
 
 
