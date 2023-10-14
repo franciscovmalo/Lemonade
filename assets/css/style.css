@@ -453,6 +453,9 @@ width: 100%;
   padding: 20px;
   padding-block-start: 50px;
 }
+.gallery #first {
+  font-size: var(--fs-4);
+}
 
 .gallery-card::after {
   top: 0;
@@ -761,9 +764,9 @@ width: 100%;
      * typography
      */
 
-    --fs-2: 4.8rem;
+    --fs-2: 2.8rem;
     --fs-3: 3.5rem;
-    --fs-7: 1.9rem;
+    --fs-7: 1.5rem;
   }
 
 
@@ -777,7 +780,7 @@ width: 100%;
     width: 180px;
    }
   .nav-links ul{
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .banner .contents {
