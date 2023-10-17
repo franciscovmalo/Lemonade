@@ -17,8 +17,8 @@
   --ff-rosario: 'Rosario', sans-serif;
   --ff-poppins: 'Poppins', sans-serif;
   
-  --fs-1: 5rem;
-  --fs-2: 4.2rem;
+  --fs-1: 3.8rem;
+  --fs-2: 3.5rem;
   --fs-3: 3rem;
   --fs-4: 2.6rem;
   --fs-5: 1.8rem;
@@ -115,25 +115,13 @@ body {
 
 .section { padding-block: var(--section-padding); }
 
-.h1 { font-size: var(--fs-1); }
+h1 { font-size: var(--fs-1); }
 
-.h1,
-.h2,
-.h3,
-.h4 {
-  color: var(--bistre);
-  font-family: var(--ff-rosario);
-  font-weight: var(--fw-600);
-  line-height: 1.3;
-}
+h2 { font-size: var(--fs-2); }
 
-.h1 .span { color: var(--french-bistre); }
+h3 { font-size: var(--fs-3); }
 
-.h2 { font-size: var(--fs-2); }
-
-.h3 { font-size: var(--fs-5); }
-
-.h4 { font-size: var(--fs-4); }
+h4 { font-size: var(--fs-4); }
 
 .btn {
   background-color: var(--green);
@@ -185,6 +173,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#title {
+  color: var(--golden);
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 nav {
@@ -308,43 +302,22 @@ width: 100%;
 }
 
 #first {
-  font-size: var(--fs-3);
+  font-size: var(--fs-1);
   text-align: center;
   color: var(--golden);
 }
 
 .about {
-  background-color: var(--bistre);
-  color: var(--white);
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
 }
 
-.about .container {
-  display: grid;
-  gap: 30px;
+.about-us {
+  width: 70vw;
+  text-align: center;
 }
-
-.about-banner {
-  border-radius: var(--radius-16);
-  max-width: max-content;
-}
-
-.about-banner-1 { border-bottom-right-radius: 120px; }
-
-.about .section-title { color: var(--white); }
-
-.about .wrapper .section-title { margin-block-start: 20px; }
-
-.about-banner-2 {
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-}
-
-.about-content .section-title { margin-block-end: 20px; }
-
-.about .btn { margin-block: 30px; }
-
-.about-banner-3 { border-bottom-right-radius: 100px; }
 
 .collection .section-text { margin-block: 20px 60px; }
 
@@ -449,12 +422,14 @@ width: 100%;
   margin-bottom: 10%;
 }
 .gallery-card {
-  height: 130px;
+  height: 330px;
   padding: 20px;
   padding-block-start: 50px;
+  margin-bottom: 20px;
 }
 .gallery #first {
   font-size: var(--fs-4);
+  margin-bottom: 30px;
 }
 
 .gallery-card::after {
@@ -550,7 +525,6 @@ width: 100%;
 .schedule .visit h1 {
   text-align: center;
   padding-top: 35%;
-  font-size: var(--fs-3);
   color: var(--golden);
 }
 
@@ -640,7 +614,7 @@ width: 100%;
 
   :root {
     --fs-2: 4.8rem;
-    --fs-3: 3.5rem;
+    --fs-3: 3rem;
     --fs-7: 1.5rem;
   }
 
@@ -694,7 +668,7 @@ width: 100%;
      * typography
      */
 
-    --fs-1: 6.5rem;
+    --fs-1: 4.5rem;
 
   }
 
@@ -735,45 +709,20 @@ width: 100%;
   }
 
 
-
-  /**
-   * FOOTER
-   */
-
   .footer-top { grid-template-columns: 1fr 1fr; }
 
 }
 
-
-
-
-
-/**
- * responsive for large than 992px screen
- */
-
 @media (min-width: 992px) {
-
-  /**
-   * CUSTOM PROPERTY
-   */
 
   :root {
 
-    /**
-     * typography
-     */
-
-    --fs-2: 2.8rem;
-    --fs-3: 3.5rem;
+    --fs-1: 6.6rem;
+    --fs-2: 4.2rem;
+    --fs-3: 3rem;
+    --fs-4: 4.9rem;
     --fs-7: 1.5rem;
   }
-
-
-
-  /**
-   * REUSED STYLE
-   */
 
   .container { max-width: 950px; }
    nav img {
@@ -887,13 +836,6 @@ width: 100%;
     margin-block-end: 60px;
   }
 
-  #first {
-    font-size: var(--fs-1);
-  }
-
-  /**
-   * ABOUT
-   */
 
   .about .container { gap: 70px; }
 
