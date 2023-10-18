@@ -115,7 +115,7 @@ h4 { font-size: var(--fs-4); }
   color: var(--white);
   display: flex;
   align-items: center;
-  max-width: max-content;
+  width: 120px;
   gap: 12px;
   min-height: 48px;
   padding-inline: 36px;
@@ -255,18 +255,18 @@ nav img{
 }
 
 .nav-links ul li ul {
-visibility: hidden;
-background: #3f5257;
-opacity: 0;
-position: absolute;
-transition: all 0.5s ease;
-left: 0;
+  visibility: hidden;
+  background: #3f5257;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  left: 0;
 display: none;
 }
 
 .nav-links ul li ul li {
-clear: both;
-width: 100%;
+  clear: both;
+  width: 100%;
 }
 
 .banner {
@@ -283,7 +283,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30%;
+  justify-content: center;
 }
 
 #first {
@@ -444,6 +444,9 @@ width: 100%;
 }
 
 .schedule .visit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(
       rgba(4, 9, 30, 0.926),rgba(26, 26, 28, 0.813)
       ), 
@@ -456,7 +459,7 @@ width: 100%;
 
 .schedule .visit h1 {
   text-align: center;
-  padding-top: 35%;
+  
   color: var(--golden);
 }
 
@@ -555,11 +558,11 @@ width: 100%;
     margin-left: -80px;
   padding-right: 4%;
   }
-
+/*
   .banner .contents {
-    margin-top: 10%;
+    margin-top: 20%;
   }
-
+*/
   .container {
     max-width: 540px;
     width: 100%;
@@ -570,19 +573,18 @@ width: 100%;
     width: 60%;
   }
 
-  .schedule .visit h1 {
-    padding-top: 15%;
-  }
 }
 
 @media (min-width: 768px) {
 
   :root {
-    --fs-1: 4.5rem;
+    --fs-1: 5.5rem;
   }
 
   .container { max-width: 720px; }
-
+/*
+  
+*/
   .grid-list {
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
@@ -609,15 +611,13 @@ width: 100%;
   }
 
   .container { max-width: 950px; }
-   nav img {
+  
+  nav img {
     width: 180px;
-   }
-  .nav-links ul{
-    margin-top: 20px;
   }
 
-  .banner .contents {
-    margin-top: 10%;
+  .nav-links ul{
+    margin-top: 20px;
   }
 
   .h1 .span { display: inline; }
@@ -634,7 +634,6 @@ width: 100%;
 
   .feature-content { padding-inline: 80px; }
 
-
   .gallery-list { grid-template-columns: repeat(4, 1fr); }
   
   .gallery-card {
@@ -645,11 +644,6 @@ width: 100%;
   .schedule .timeline{ 
     width: 60%;
   }
-
-  .schedule .visit h1 {
-    padding-top: 15%;
-  }
-
 }
 
 @media (min-width: 1200px) {
@@ -662,4 +656,16 @@ width: 100%;
 
   .footer-brand { padding-inline-end: 20px; }
 
+}
+
+@media (max-width: 1000px) {
+  .banner .contents {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 780px) {
+  .banner .contents {
+    margin-top: 20%;
+  }
 }
