@@ -115,6 +115,8 @@ h4 { font-size: var(--fs-4); }
   color: var(--white);
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 120px;
   gap: 12px;
   min-height: 48px;
