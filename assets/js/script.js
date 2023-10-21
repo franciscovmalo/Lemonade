@@ -50,3 +50,28 @@ const headerActive = function () {
 }
 window.addEventListener("scroll", headerActive);
 
+
+const wrapper = document.querySelector('.cards-wrapper');
+const dots = document.querySelectorAll('.cards-wrapper');
+let activeDot = 0;
+
+dots.forEach((dot, idx) => {
+  dot.setAttribute('data-num', idx);
+
+  dot.addEventListener('click', (e) => {
+    let clickedDot = e.target.dataset.num;
+
+    if(clickedDot == activeDot) {
+      return;
+    }
+    else {
+      let slideArea = wrapper.parentElement.clientWidth;
+      let pixels = -slideArea * clickedDot
+      wrapper.style.transform = 'translateX('+ pixels + 'px)';
+
+      dots[activeDot].classList.remove('active');
+      dots[clickedDot].classList.add('active');
+      activeDot = clickedDot;
+    }
+  });
+});
