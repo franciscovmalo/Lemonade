@@ -108,7 +108,7 @@ h2 { font-size: var(--fs-2); }
 
 h3 { font-size: var(--fs-3); }
 
-h4 { font-size: var(--fs-4); }
+h4 { font-size: 2vw; }
 
 .btn {
   background-color: var(--green);
@@ -396,8 +396,12 @@ display: none;
 
 .gallery-card .card-title { color: var(--white); }
 
+.pratos {
+  margin-bottom: 10%;
+}
+
 .slide-area {
-  width: 80%;
+  width: 220px;
   overflow-x: hidden;
   margin: auto;
 }
@@ -414,6 +418,20 @@ display: none;
   font-size: 40px;
   margin: 10px;
   flex: 200px 0 0;
+  /*transform: scale(0.8);*/
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+
+#price {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--green);
 }
 
 .dots {
@@ -694,16 +712,18 @@ display: none;
   .feature-content { padding-inline: 80px; }
 
   .gallery-list { grid-template-columns: repeat(4, 1fr); }
-  
-  .cards-wrapper {
-    
-    grid-template-columns: repeat(4, 1fr);
-    
-  }
 
   .gallery-card {
     height: 450px;
     padding: 60px 40px;
+  }
+
+  .slide-area {
+    width: 1100px;
+  }
+
+  .card {
+    height: 300px;
   }
 
   .schedule .timeline{ 

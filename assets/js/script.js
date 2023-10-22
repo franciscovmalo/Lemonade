@@ -16,6 +16,14 @@ const addEventOnElements = function (elements, eventType, callback) {
   }
 }
 
+/*$(document).ready(funnction() {
+  let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+    console.log("Mobile");
+  }else {
+    alert("Desktop");
+  }
+});*/
 
 
 /**
@@ -53,7 +61,32 @@ window.addEventListener("scroll", headerActive);
 
 const wrapper = document.querySelector('.cards-wrapper');
 const dots = document.querySelectorAll('.dot');
+const slider = document.getElementsByClassName('.cards-wrapper')[0];
 let activeDot = 0;
+
+/* slider.addEventListener('touchstart', handleTouchStart, false);
+slider.addEventListener('touchmove', handleTouchMove, false);
+let xDown = null;
+
+function handleTouchStart(evt) {
+  let xDown = evt.touches[0].clientX;
+}
+
+function handleTouchMove(evt) {
+  if (!xDown) {
+    return;
+  }
+
+  let xUp = evt.touches[0].clientX;
+  let xDiff = xDown - xUp;
+
+  if (xDiff > 0) {
+    console.log("Right");
+  } else {
+    console.log("Left");
+  }
+  xDown = null;
+} */
 
 dots.forEach((dot, idx) => {
   dot.setAttribute('data-num', idx);
@@ -66,12 +99,14 @@ dots.forEach((dot, idx) => {
     }
     else {
       let slideArea = wrapper.parentElement.clientWidth;
-      let pixels = -slideArea * clickedDot
+      let pixels = -slideArea * clickedDot;
+      
       wrapper.style.transform = 'translateX('+ pixels + 'px)';
 
       dots[activeDot].classList.remove('active');
-      dots[clickedDot].classList.add('active');
+      dots[clickedDot].classList.add('active'); 
       activeDot = clickedDot;
     }
   });
 });
+
