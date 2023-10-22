@@ -52,7 +52,7 @@ window.addEventListener("scroll", headerActive);
 
 
 const wrapper = document.querySelector('.cards-wrapper');
-const dots = document.querySelectorAll('.cards-wrapper');
+const dots = document.querySelectorAll('.dot');
 let activeDot = 0;
 
 dots.forEach((dot, idx) => {
