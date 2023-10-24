@@ -404,6 +404,35 @@ display: none;
   outline: none;
 }
 
+.slide-area.grab {
+  cursor: grab;
+}
+
+.slide-area.grabbing{
+  cursor: grabbing;
+}
+
+.slider-arrows {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.next,
+.prev {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .25;
+  pointer-events: none;
+}
+
 .dot:hover {
   background: rgba(0, 0, 0, 0.3);
 }
