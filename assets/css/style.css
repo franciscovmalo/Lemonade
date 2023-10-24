@@ -19,11 +19,11 @@
   
   --fs-1: 3.8rem;
   --fs-2: 3.5rem;
-  --fs-3: 3rem;
+  --fs-3: 2.4rem;
   --fs-4: 2.6rem;
   --fs-5: 1.8rem;
   --fs-6: 1.3rem;
-  --fs-7: 0.9rem;
+  --fs-7: 1rem;
 
   --fw-600: 600;
   --fw-700: 700;
@@ -210,7 +210,7 @@ nav img{
   display: inline-block;
   position: relative;
   padding:  20px 0px 25px 10px;
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 2px;
 }
 .nav-links ul li a{
@@ -273,7 +273,7 @@ display: none;
 
 .banner {
   position: relative;
-  min-height: 88vh;    
+  max-height: 88vh;    
   background: linear-gradient(
       rgba(4, 9, 30, 0.926),rgba(26, 26, 28, 0.813)
     ), 
@@ -302,6 +302,7 @@ display: none;
 .about-us {
   width: 70vw;
   text-align: center;
+  font-size: var(--fs-6);
 }
 
 .gallery {
@@ -373,7 +374,7 @@ display: none;
 }
 
 #price {
-  font-size: 14px;
+  font-size: var(--fs-7);
   font-weight: 500;
   width: 200px;
   text-align: center;
@@ -384,7 +385,7 @@ display: none;
 
 #name {
   background-color: var(--green);
-  font-size: 1.7rem;
+  font-size: var(--fs-7);
 }
 
 .dots {
@@ -416,11 +417,14 @@ display: none;
       rgba(4, 9, 30, 0.926),rgba(26, 26, 28, 0.813)
       ), 
     url("../images/bar.jpg") center center / cover;
-  height: 40vh;
+  height: 240px;
   background-position: center;
 }
 
-/*.blog {display: none;}*/
+.bar .gallery-card {
+  background-size: 350px 450px;
+}
+
 .blog .section-text { margin-block: 20px 36px; }
 
 .blog .grid-list { gap: 30px; }
@@ -474,7 +478,6 @@ display: none;
   align-items: center;
   justify-content: center;
   background-repeat: repeat;
-  
   background-size: cover;
 }
 
@@ -483,13 +486,12 @@ display: none;
       rgba(4, 9, 30, 0.926),rgba(26, 26, 28, 0.813)
       ), 
     url("../images/lemo.jpg") center center / cover;
-  height: 60vh;
+  height: 240px;
   /* background-position: top; */
 }
 
 .schedule .visit h1 {
   text-align: center;
-  
   color: var(--golden);
 }
 
@@ -565,18 +567,19 @@ display: none;
 
 
 
-
-
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
-
+@media (min-width: 440px) {
+  .slide-area { width: 440px; }
+}
 
 @media (min-width: 575px) {
 
   :root {
     --fs-2: 4.8rem;
-    --fs-3: 3rem;
+    --fs-3: 2.2rem;
+    --fs-6: 1.4rem;
     --fs-7: 1.5rem;
   }
 
@@ -588,21 +591,24 @@ display: none;
     margin-left: -80px;
   padding-right: 4%;
   }
-/*
-  .banner .contents {
-    margin-top: 20%;
-  }
-*/
+
   .container {
     max-width: 540px;
     width: 100%;
     margin-inline: auto;
   }
 
-  .schedule .timeline{ 
-    width: 60%;
+  .gallery-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
+  .schedule .timeline{ width: 60%; }
+
+}
+
+@media (min-width: 672px) {
+  .slide-area { width: 660px; }
 }
 
 @media (min-width: 768px) {
@@ -612,17 +618,10 @@ display: none;
   }
 
   .container { max-width: 720px; }
-/*
-  
-*/
+
   .grid-list {
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
-  }
-
-  .gallery-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
 
   .footer-top { grid-template-columns: 1fr 1fr; }
@@ -632,49 +631,38 @@ display: none;
 @media (min-width: 992px) {
 
   :root {
-
     --fs-1: 6.6rem;
     --fs-2: 4.2rem;
-    --fs-3: 3rem;
+    --fs-3: 2.6rem;
     --fs-4: 4.9rem;
+    --fs-6: 1.8rem;
     --fs-7: 1.5rem;
   }
 
   .container { max-width: 950px; }
   
-  nav img {
-    width: 180px;
-  }
+  nav img { width: 180px; }
 
-  .nav-links ul{
-    margin-top: 20px;
-  }
+  .nav-links ul{ margin-top: 20px; }
 
   .h1 .span { display: inline; }
 
   .gallery-list { grid-template-columns: repeat(4, 1fr); }
 
-  .gallery-card {
-    height: 450px;
-    padding: 60px 40px;
-  }
+  .gallery-card { height: 450px; }
 
-  .slide-area {
-    width: 1100px;
-  }
+  .slide-area { width: 880px; }
 
-  .card {
-    height: 300px;
-  }
+  .card { height: 300px; }
 
-  .schedule .timeline{ 
-    width: 60%;
-  }
+  .schedule .timeline{ width: 60%; }
 }
 
 @media (min-width: 1200px) {
 
   .container { max-width: 1250px; }
+
+  .slide-area { width: 1100px; }
 
   .blog .grid-list { gap: 60px; }
 
@@ -684,10 +672,3 @@ display: none;
 
 }
 
-@media (max-width: 1000px) {
-  
-}
-
-@media (max-width: 780px) {
-  
-}
