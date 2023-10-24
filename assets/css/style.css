@@ -108,7 +108,10 @@ h2 { font-size: var(--fs-2); }
 
 h3 { font-size: var(--fs-3); }
 
-h4 { font-size: 2vw; }
+h4 { 
+  font-size: var(--fs-7);
+  font-weight: 500;
+}
 
 .btn {
   background-color: var(--green);
@@ -379,12 +382,12 @@ display: none;
   width: 200px;
   text-align: center;
   color: var(--white);
-  background-color: var(--green);
+  background-color:#0c492be3;
   bottom: 0px;
 }
 
 #name {
-  background-color: var(--green);
+  background-color: #0c492be3;
   font-size: var(--fs-7);
 }
 
