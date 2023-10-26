@@ -208,6 +208,7 @@ nav img{
   margin-left: -120px;
   padding-right: 1%;
 }
+
 .nav-links ul li{
   list-style: none;
   display: inline-block;
@@ -276,7 +277,7 @@ display: none;
 
 .banner {
   position: relative;
-  max-height: 88vh;    
+  max-height: 100vh;    
   background: linear-gradient(
       rgba(4, 9, 30, 0.926),rgba(26, 26, 28, 0.813)
     ), 
