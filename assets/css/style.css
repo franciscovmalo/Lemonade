@@ -577,12 +577,13 @@ display: none;
 
 .social ul li {
   display: flex;
+  flex-direction: row-reverse;
   gap: 10px;
   margin-bottom: 10px;
 }
 
 .social ul img{ 
-  width: 20px;
+  width: 25px;
 }
 
 .social-link {
