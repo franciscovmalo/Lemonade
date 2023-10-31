@@ -401,22 +401,6 @@ display: none;
   font-size: var(--fs-7);
 }
 
-.dots {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-.dot {
-  border: none;
-  background: rgba(0, 0, 0, 0.2);
-  width: 20px;
-  height: 20px;
-  margin: 5px;
-  border-radius: 50%;
-  outline: none;
-}
-
 .slide-area.grab {
   cursor: grab;
 }
