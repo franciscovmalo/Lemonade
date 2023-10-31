@@ -271,7 +271,7 @@ nav .desktop {
   position: absolute;
   transition: all 0.5s ease;
   left: 0;
-display: none;
+  display: none;
 }
 
 .nav-links ul li ul li {
@@ -742,7 +742,7 @@ display: none;
     letter-spacing: 4px;
   }
 }
-
+/* 
 @media only screen and (max-height: 520px) and (orientation: landscape) {
-  nav { display: none; }
-}
+  .nav-active { display: none; }
+} */
