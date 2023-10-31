@@ -120,10 +120,10 @@ h4 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 120px;
+  width: 140px;
   gap: 12px;
   min-height: 48px;
-  padding-inline: 36px;
+  
   transition: var(--transition-1);
   border-radius: 10px;
   margin-top: 60px;
@@ -602,7 +602,20 @@ nav .desktop {
 }
 
 
+.menu {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  grid-template-columns: 1fr, 1fr;
+  row-gap: 30px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
+.menu img {
+  width: 250px;
+  height: 350px;
+}
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -653,6 +666,11 @@ nav .desktop {
   }
 
   .schedule .timeline{ width: 60%; }
+
+  .menu img {
+    width: 450px;
+    height: 600px;
+  }
 
 }
 
