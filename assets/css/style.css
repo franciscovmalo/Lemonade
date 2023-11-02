@@ -123,7 +123,6 @@ h4 {
   width: 140px;
   gap: 12px;
   min-height: 48px;
-  
   transition: var(--transition-1);
   border-radius: 10px;
   margin-top: 60px;
@@ -603,19 +602,38 @@ nav .desktop {
 
 
 .menu {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+  gap: 20px;
+  /* display: grid;
   place-items: center;
   width: 100%;
   grid-template-columns: 1fr, 1fr;
   row-gap: 30px;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 5%; */
 }
 
 .menu img {
   width: 250px;
   height: 350px;
 }
+
+#menu-pratos .slide-area{
+  width: 100%;
+  
+}
+
+#menu-pratos .cards-wrapper{
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -667,10 +685,7 @@ nav .desktop {
 
   .schedule .timeline{ width: 60%; }
 
-  .menu img {
-    width: 450px;
-    height: 600px;
-  }
+  
 
 }
 
@@ -704,6 +719,11 @@ nav .desktop {
 
   .footer-top { grid-template-columns: 1fr 1fr; }
 
+  .menu img {
+    width: 350px;
+    height: 460px;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -734,6 +754,15 @@ nav .desktop {
   .card { height: 300px; }
 
   .schedule .timeline{ width: 60%; }
+
+  .menu {
+    gap: 50px;
+  }
+
+  .menu img {
+    width: 450px;
+    height: 600px;
+  }
 }
 
 @media (min-width: 1200px) {
